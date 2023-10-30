@@ -1,0 +1,72 @@
+<script>
+
+    // variables
+
+    var abc;  // declare variable
+    abc = 123;  // assign value
+
+    console.log(abc);
+    // axpected output 123
+
+    let x;  // declare variable
+    x = "xyz";  // assign value
+
+    console.log(x);
+    // axpected output xyz
+
+    const para = "tolet";  // assign value
+
+    console.log(para);
+    // axpected output 123
+
+
+    // variable Data-Types 
+
+    var a = 123;
+    console.log(typeof a);  //output:- number
+
+    var b = 
+    console.log(typeof b);  //output:- null
+
+    var c = true;
+    console.log(typeof c);  //output:- buleon
+
+    var d = 123573495894448948398n;
+    console.log(typeof d);  //output:- Bigint
+
+    var e = "dataType";
+    console.log(typeof e);  //output:- string
+
+    var f = Symbol("js");
+    console.log(typeof f);  //output:- symbol
+
+    var g = {
+        name : "paras"
+    }
+    console.log(typeof g);  //g as a arrey but data type always object 
+
+    var  h= [1, 2, 3];
+    console.log(typeof h);  //output:- Object
+
+
+
+    // Task 
+
+    let details = {
+        name : "paras vekariya",
+        age : "22",
+        hobbies : "coding"
+    }
+
+    document.write(`
+    My name is :- ${details.name}
+    <br /> My age is :- ${details.age} year
+    <br /> My age is :- ${details.hobbies}
+    <br />
+    `)
+    document.write("Data Type is :-" + " " ,typeof details)
+
+
+
+
+</script>
