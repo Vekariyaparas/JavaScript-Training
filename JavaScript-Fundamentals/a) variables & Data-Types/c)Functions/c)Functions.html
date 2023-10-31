@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <script>
+        // Normal function 
+
+        function myFristFunction(){
+            let a = 5;
+            let b = 15;
+            let c= a+b;
+            document.write("Addition number of a and b is :-", c)
+        }
+        myFristFunction();
+        // output  Addition number of a and b is :-20
+
+
+        function second (fristName, lastName) {
+            return "My name is" + " " + fristName + " " + lastName
+        }
+        console.log(second("paras", "vekariya"));
+        // output My name is paras vekariya
+
+
+        // Arrow function 
+
+        arrow = (a, b) => {
+            return a + b;
+        }
+        console.log(arrow(2, 3));
+        // output 5
+
+        data = (x, y) => x + y;
+        console.log(data(8, 9));
+        // output 17
+
+        data = (x, y) => (x + y);
+        console.log(data(8, 9));
+        // output 17
+
+        obj = () => ({userName : "JavaScript"});
+        console.log(obj());
+        // output userName: 'JavaScript'
+
+
+        // Task 
+
+        const myArray = [24, 65, 12, 90, 46, 9]
+        const initialValue = 0;
+        const total = myArray.reduce((acc, num) => acc + num, 0);
+        console.log(total);
+        // output 246 
+
+    </script>
+</body>
+</html>
