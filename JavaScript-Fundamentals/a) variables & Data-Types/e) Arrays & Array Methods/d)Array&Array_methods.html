@@ -1,0 +1,77 @@
+<script>
+    // Array length method 
+    const cars = ["Honda", "KIA", "Audi", "BMW", "Hyundai", "Scoda", "volkswagen"];
+    let Test = cars.length;
+    console.log(Test); //output 7
+
+    // Array push method 
+    // Note:- The push() method adds a new element to an array (at the end).
+    const carsCompany = ["Honda", "KIA", "Audi", "BMW", "Hyundai"];
+    let addNewCar1 = carsCompany.push("Scoda");
+    let addNewCar2 = carsCompany.push("volkswagen");
+    console.log(carsCompany); //output ['Honda', 'KIA', 'Audi', 'BMW', 'Hyundai', 'Scoda', 'volkswagen']
+
+    // Array pop method 
+    // Note:- The pop() method removes the last element from an array.
+    const fruitsName = ["Apple", "Banana", "Guavava", "Graps", "Orange", "Kiwi"];
+    let removeFruit1 = fruitsName.pop();
+    let removeFruit2 = fruitsName.pop();
+    console.log(fruitsName) // output ['Apple', 'Banana', 'Guavava', 'Graps']
+
+    // Array shift method 
+    // Note:- The shift() method removes the first array element.
+    const studentName = ["Paras", "Dev", "Tanmay", "Deep", "Jay", "Axit", "Yash"];
+    let addFirst1 = studentName.shift();
+    let addFirst2 = studentName.shift();
+    console.log(studentName); //output  ['Tanmay', 'Deep', 'Jay', 'Axit', 'Yash']
+
+    //Array unshift method
+    // Note :- The unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements.
+    const languages = ["HTML", "PHP", "JavaScript", "Python"];
+    let addLanguage = languages.unshift("React JS");
+    console.log(languages); //output ['React JS', 'HTML', 'PHP', 'JavaScript', 'Python']
+
+    //Array map method
+    const mapMethod = [1, 4, 9, 16, 25];
+    const myNewMapMethod = mapMethod.map(Math.sqrt);
+    console.log(myNewMapMethod); //output [1, 2, 3, 4, 5]
+
+    const addNum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    const newAddNum = addNum.map( (num) => num + 10 );
+    console.log(newAddNum) // output [11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+
+    // Array filter method 
+    const myNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let myNewNumbers = myNumbers.filter( (num) => num > 5 );
+    console.log(myNewNumbers); //output [6, 7, 8, 9, 10]
+
+    //Array convert to string method
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    const newFruits = fruits.toString();
+    console.log(newFruits) //output Banana,Orange,Apple,Mango 
+
+
+    //Task
+    const watchProduct = [
+        {productName: 'Casio', productPrice: '$25'},
+        {productName: 'Fastrack', productPrice: '$10'},
+        {productName: 'Fossil', productPrice: '$55'},
+        {productName: 'Titan', productPrice: '$53'},
+        {productName: 'TIMEX', productPrice: '$18'},
+        {productName: 'Sonata', productPrice: '$22'},
+        {productName: 'LOUIS DEVIN', productPrice: '$52'},
+        {productName: 'Rado', productPrice: '$60'},
+        {productName: 'Noise', productPrice: '$35'},
+    ]
+
+    const userProducts = watchProduct.filter( (abovePrice) =>{
+        return abovePrice.productPrice > '$50'
+    } );
+    console.log(userProducts);
+    /* output
+        [{productName: 'Fossil', productPrice: '$55'} 
+         {productName: 'Titan', productPrice: '$53'} 
+         {productName: 'LOUIS DEVIN', productPrice: '$52'}   
+         {productName: 'Rado', productPrice: '$60'}]
+    */
+</script>
