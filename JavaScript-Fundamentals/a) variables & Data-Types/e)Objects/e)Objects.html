@@ -1,0 +1,73 @@
+<script>
+
+    // object 
+    const myObj = { name: "paras", age: 20, Technology: "React js" };
+    console.log("My name is:-" + " " + myObj.name);
+    //output My name is:- paras
+
+    console.log("My age is:-" + " " + myObj.age);
+    //output My age is:- 20
+
+    console.log("My name is" + " " + myObj["name"] + " " + "i am" + " " + myObj["age"] + " " + "years old.");
+    //output My name is paras i am 20 years old.
+
+    const person = {
+        firstName: "Dev",
+        lastName: "Bakori",
+        id: 5566,
+        fullName: function () {
+            return this.firstName + " " + this.lastName;
+        }
+    };
+    console.log(person.fullName());
+    //output Dev Bakori
+
+    //oject.getOwnPropertyDescriptor()
+     console.log(Object.getOwnPropertyDescriptor(person, "firstName"));
+    /* output
+    
+    value: "Dev"
+    configurable: true
+    enumerable: true
+    writable: true
+    */
+
+    // Display object properties 
+    const myDetails = {
+        firstName: "John",
+        lastName: "Deo",
+        age: 30
+    }
+
+    let text = "";
+    for (let x in myDetails) {
+        text += myDetails[x] + " ";
+    }
+    console.log(text);
+    // output John Deo 30
+
+    // Object.values() converts an object to an array.
+    console.log(Object.values(myDetails));
+    // output ['John', 'Deo', 30]
+
+    // Display properties in JSON format.
+    console.log(JSON.stringify(myDetails));
+    //output {"firstName":"John","lastName":"Deo","age":30}
+
+
+
+    // Task 
+    const Books = [
+        {title: "Bill Gates", author: "The Road Ahead", summary: "How the emerging technologies of the information highway have the ability to transform the life of every person on the planet."},
+        {title: "Steve Jobs", author: "alter Isaacson", summary: "The author tries to make sense of the billionaire entrepreneur he has shadowed for two years "},
+        {title: "Ratan N. Tata", author: "HarperCollins", summary: "center of everything we do."},
+        {title: "Gautam Adani", author: "R.N. Bhaskar", summary: "A renowned economist, columnist, and prolific author of 'Gautam Adani' & 'Game India'."}
+    ]
+    let element = " ";
+    for (let i = 0; i <= Books.length; i++) {
+         element = Books[i].author + ":-" + " " + Books[i].summary;
+        
+         console.log(element)
+        }
+
+</script>
