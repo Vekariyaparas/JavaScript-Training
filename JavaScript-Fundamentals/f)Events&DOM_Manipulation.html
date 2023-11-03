@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Methods</title>
+    <style>
+        .counter_app{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 5px;
+            padding: 20px 25px 40px 25px !important;
+            box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.5);
+            align-items: center;
+            text-align: center;
+        }
+        #increment_count,
+        #decrement_count,
+        #total_count{
+            font-size: 35px;
+            font-family: 600;
+            background-color: black;
+            border-radius: 5px;
+            width: 50px;
+            display: inline-block;
+            color: white;
+            cursor: pointer;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- <p id="demo"></p> -->
+
+    <!-- <div class="parent">
+        <div class="days">Monday</div>
+        <div class="days">Tuesday</div>
+        <div class="days">Wnesday</div>
+        <div class="days">Thrusday</div>
+    </div> -->
+
+
+
+    <!-- Task -->
+    <div class="counter_app">
+        <h1>Counter App</h1>
+        <div id="increment_count">+</div>
+        <div id="total_count"></div>
+        <div id="decrement_count">-</div>
+    </div>
+
+    <script>
+        // DOM Methods 
+        // document.getElementById('demo').innerHTML = "Hello, i am using DOM method";
+
+
+        // queryselectore 
+        // const parent = document.querySelector('.parent');
+        // console.log(parent);
+
+        // for (let i = 0; i < parent.children.length; i++) {
+        //     console.log(parent.children[i].innerHTML);
+            
+        // }
+
+        // Task
+
+        // Select Increment and Decrement button 
+        const  incrementCount = document.getElementById('increment_count');
+        const  decrementCount = document.getElementById('decrement_count');
+        
+        // Select total count 
+        const totalCount = document.getElementById('total_count');
+
+        var count = 0;
+
+        // Display count 
+        totalCount.innerHTML = count;
+
+        // Increment count 
+        const handleIncrementCount = () =>{
+            count++;
+            totalCount.innerHTML = count;
+        }
+
+        // Decrement count 
+        const handleDrecrementCount = () =>{
+            count--;
+            totalCount.innerHTML = count;
+        }
+
+        // Click event 
+        incrementCount.addEventListener('click', handleIncrementCount);
+        decrementCount.addEventListener('click', handleDrecrementCount);
+
+    </script>
+
+
+</body>
+</html>
